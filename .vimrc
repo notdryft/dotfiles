@@ -1,9 +1,10 @@
-:set expandtab
-:set number
-:set shiftwidth=2
-:set tabstop=2
+" General
+set expandtab
+set number
+set shiftwidth=2
+set tabstop=2
 
-:syntax enable
+syntax enable
 
 " Tab mappings
 map <leader>tt :tabnew<cr>
