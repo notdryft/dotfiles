@@ -1,8 +1,9 @@
 " General
-set expandtab
-set number
-set shiftwidth=2
-set tabstop=2
+set expandtab    " Insert spaces instead of tab
+set hidden       " Switch beetwen buffers without saving
+set number       " Number on lines
+set shiftwidth=2 " Indent by 2 spaces
+set tabstop=2    " Tab by 2 spaces
 
 syntax enable
 
