@@ -1,4 +1,5 @@
 " General
+
 set expandtab    " Insert spaces instead of tab
 set hidden       " Switch between buffers without saving
 set number       " Number on lines
@@ -8,6 +9,7 @@ set tabstop=2    " Tab by 2 spaces
 syntax enable
 
 " Tab mappings
+
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
 map <leader>tc :tabclose<cr>
