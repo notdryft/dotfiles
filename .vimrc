@@ -14,5 +14,5 @@ map <leader>tn :tabnext<cr>
 map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
-map <leader>tm :tabmove<cr>
+map <leader>tm :tabmove
 
