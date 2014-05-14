@@ -1,7 +1,7 @@
 :set expandtab
-:set tabstop=2
-:set shiftwidth=2
 :set number
+:set shiftwidth=2
+:set tabstop=2
 
 :syntax enable
 
@@ -15,4 +15,3 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
-
