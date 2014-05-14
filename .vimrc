@@ -1,6 +1,6 @@
 " General
 set expandtab    " Insert spaces instead of tab
-set hidden       " Switch beetwen buffers without saving
+set hidden       " Switch between buffers without saving
 set number       " Number on lines
 set shiftwidth=2 " Indent by 2 spaces
 set tabstop=2    " Tab by 2 spaces
