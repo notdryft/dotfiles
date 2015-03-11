@@ -1,3 +1,17 @@
+" Vundle configuration
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'rust-lang/rust.vim'
+
+call vundle#end()
+filetype plugin indent on
+
 " General
 
 set expandtab    " Insert spaces instead of tab
@@ -19,3 +33,4 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
