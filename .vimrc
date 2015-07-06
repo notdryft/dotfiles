@@ -22,6 +22,9 @@ set shiftwidth=2 " Indent by 2 spaces
 set tabstop=2    " Tab by 2 spaces
 
 syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Tab mappings
 
