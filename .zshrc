@@ -89,9 +89,6 @@ cassandra_version="2.1.7"
 export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
 export PATH=/opt/apache-cassandra-${cassandra_version}/tools/bin:$PATH
 
-vert_x_version="2.1.5"
-export PATH=/opt/vert.x-${vert_x_version}/bin:$PATH
-
 eval "$(gatling-build init -)"
 
 function docker-env() {
