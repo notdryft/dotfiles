@@ -104,6 +104,7 @@ function docker-env() {
   eval "$(docker-machine env $1)"
 }
 
+alias dm=docker-machine
 alias docker-env=docker-env
 
 # The next line updates PATH for the Google Cloud SDK.
