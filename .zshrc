@@ -76,7 +76,7 @@ export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
-java_version="1.8.0_51"
+java_version="1.8.0_66"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 
