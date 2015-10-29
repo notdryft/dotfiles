@@ -85,9 +85,17 @@ export PATH=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Ho
 export PATH=/opt/arm-eabi-toolchain/bin:$PATH
 export PATH=/Users/notdryft/Code/gatling/build/gatling-build/bin:$PATH
 
-cassandra_version="2.2.0"
+cassandra_version="2.2.3"
 export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
 export PATH=/opt/apache-cassandra-${cassandra_version}/tools/bin:$PATH
+
+function reset-cassandra() {
+  pgrep -f cassandra | xargs kill -9 && \
+    rm -rf /opt/apache-cassandra-${cassandra_version}/data && \
+    cassandra
+}
+
+alias reset-cassandra=reset-cassandra
 
 eval "$(gatling-build init -)"
 
