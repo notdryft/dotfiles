@@ -116,8 +116,7 @@ function docker-mrproper() {
 
   set -x
 
-  docker stop $(docker ps -a -q) && \
-  docker rm $(docker ps -a -q) && \
+  docker-rm && \
   docker rmi -f $(docker images | sed 1d | awk '{ print $3 }')
 }
 
