@@ -83,7 +83,7 @@ export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Content
 export PATH=/usr/local/sbin:$PATH
 export PATH=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home/bin:$PATH
 export PATH=/opt/arm-eabi-toolchain/bin:$PATH
-export PATH=/Users/notdryft/Code/gatling/build/gatling-build/bin:$PATH
+export PATH=/Users/notdryft/Code/gatling/build/gatling-build/build/bin:$PATH
 
 cassandra_version="2.2.3"
 export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
