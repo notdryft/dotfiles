@@ -7,7 +7,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
 Plugin 'derekwyatt/vim-scala'
+Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
@@ -37,4 +40,3 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
-

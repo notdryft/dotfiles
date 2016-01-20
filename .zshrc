@@ -76,7 +76,9 @@ export LANG=en_GB.UTF-8
 export LANGUAGE=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
-java_version="1.8.0_66"
+export GOPATH=/Users/notdryft/Code/go
+
+java_version="1.8.0_72"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 
@@ -85,7 +87,7 @@ export PATH=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Ho
 export PATH=/opt/arm-eabi-toolchain/bin:$PATH
 export PATH=/Users/notdryft/Code/gatling/build/gatling-build/build/bin:$PATH
 
-cassandra_version="2.2.3"
+cassandra_version="2.2.4"
 export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
 export PATH=/opt/apache-cassandra-${cassandra_version}/tools/bin:$PATH
 
@@ -125,6 +127,9 @@ alias de=docker-env
 alias dm=docker-machine
 alias dmp=docker-mrproper
 alias drm=docker-rm
+
+# Add private scripts
+source "$HOME/.private/all.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/opt/google-cloud-sdk/path.zsh.inc'
