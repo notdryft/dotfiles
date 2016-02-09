@@ -78,7 +78,7 @@ export LC_ALL=en_GB.UTF-8
 
 export GOPATH=/Users/notdryft/Code/go
 
-java_version="1.8.0_72"
+java_version="1.8.0_74"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 
