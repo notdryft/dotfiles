@@ -29,6 +29,11 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" Buffers
+
+nmap <c-n> :bnext<cr>
+nmap <c-p> :bprev<cr>
+
 " Search
 
 set incsearch
