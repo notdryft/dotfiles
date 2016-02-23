@@ -29,6 +29,19 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" Search
+
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+nmap \q :nohlsearch<cr>
+
+" Mappings
+
+nmap \l :setlocal number!<cr>
+nmap \o :set paste!<cr>
+
 " Tab mappings
 
 map <leader>tt :tabnew<cr>
