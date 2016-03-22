@@ -83,7 +83,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Conten
 export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
 
 export PATH=/usr/local/sbin:$PATH
-export PATH=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home/bin:$PATH
+export PATH=${JAVA_HOME}/bin:$PATH
 export PATH=/opt/arm-eabi-toolchain/bin:$PATH
 export PATH=/Users/notdryft/Code/gatling/build/gatling-build/build/bin:$PATH
 
