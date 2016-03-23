@@ -128,6 +128,9 @@ alias dm=docker-machine
 alias dmp=docker-mrproper
 alias drm=docker-rm
 
+# Autoenv
+source /usr/local/opt/autoenv/activate.sh
+
 # Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
