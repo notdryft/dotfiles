@@ -134,9 +134,6 @@ source /usr/local/opt/autoenv/activate.sh
 # Autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# Add private scripts
-source "$HOME/.private/all.sh"
-
 # The next line updates PATH for the Google Cloud SDK.
 source '/opt/google-cloud-sdk/path.zsh.inc'
 
