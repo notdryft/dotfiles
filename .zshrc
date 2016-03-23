@@ -128,6 +128,9 @@ alias dm=docker-machine
 alias dmp=docker-mrproper
 alias drm=docker-rm
 
+# Autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # Add private scripts
 source "$HOME/.private/all.sh"
 
