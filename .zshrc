@@ -87,7 +87,7 @@ export PATH=${JAVA_HOME}/bin:$PATH
 export PATH=/opt/arm-eabi-toolchain/bin:$PATH
 export PATH=/Users/notdryft/Code/gatling/build/gatling-build/build/bin:$PATH
 
-cassandra_version="3.4"
+cassandra_version="3.5"
 export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
 export PATH=/opt/apache-cassandra-${cassandra_version}/tools/bin:$PATH
 
