@@ -40,12 +40,12 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nmap \q :nohlsearch<cr>
+nmap <leader>q :nohlsearch<cr>
 
 " Mappings
 
-nmap \l :setlocal number!<cr>
-nmap \o :set paste!<cr>
+nmap <leader>l :setlocal number!<cr>
+nmap <leader>o :set paste!<cr>
 
 " Tab mappings
 
