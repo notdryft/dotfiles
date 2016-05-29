@@ -18,6 +18,7 @@ filetype plugin indent on
 
 " General
 
+set showcmd      " Show when leader is pressed
 set expandtab    " Insert spaces instead of tab
 set hidden       " Switch between buffers without saving
 set number       " Number on lines
