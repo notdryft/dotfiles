@@ -18,6 +18,7 @@ filetype plugin indent on
 
 " General
 
+set backspace=2  " Make backspace work like most other apps
 set showcmd      " Show when leader is pressed
 set expandtab    " Insert spaces instead of tab
 set hidden       " Switch between buffers without saving
