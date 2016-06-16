@@ -1,4 +1,4 @@
-cassandra_version="3.6"
+cassandra_version="3.7"
 
 export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
 export PATH=/opt/apache-cassandra-${cassandra_version}/tools/bin:$PATH
