@@ -7,3 +7,9 @@ function unattr() {
     xattr -d "$attr" "$1"
   done
 }
+
+function unattrs() {
+  for file in $(find "$1"); do
+    unattr $file
+  done
+}
