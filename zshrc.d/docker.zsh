@@ -21,6 +21,8 @@ function docker-mrproper() {
 
 alias dc=docker-compose
 alias de=docker-env
+alias dps='docker ps -a -q'
 alias dm=docker-machine
+alias dmc="dm create --driver virtualbox $1"
 alias dmp=docker-mrproper
 alias drm=docker-rm
