@@ -45,7 +45,16 @@ ZSH_THEME="gianu"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github mvn svn scala java sbt npm ruby rake rails python perl bower)
+plugins=(
+  brew
+  bower npm
+  git github svn
+  java mvn
+  perl
+  python
+  ruby bundler rails rake
+  scala sbt
+)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
