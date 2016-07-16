@@ -15,7 +15,6 @@ function docker-mrproper() {
 
   set -x
 
-  docker-rm && \
   docker rmi -f $(docker images | sed 1d | awk '{ print $3 }')
 }
 
