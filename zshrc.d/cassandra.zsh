@@ -8,5 +8,3 @@ function reset-cassandra() {
     rm -rf /opt/apache-cassandra-${cassandra_version}/data && \
     cassandra
 }
-
-alias reset-cassandra=reset-cassandra

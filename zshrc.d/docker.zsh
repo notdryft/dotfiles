@@ -3,6 +3,13 @@ function docker-env() {
   eval "$(docker-machine env $1)"
 }
 
+function docker-machine-insecure-registry() {
+
+  set -x
+
+  docker-machine create --driver virtualbox --engine-insecure-registry $2 $1
+}
+
 function docker-rm() {
 
   set -x
@@ -16,13 +23,6 @@ function docker-mrproper() {
   set -x
 
   docker rmi -f $(docker images | sed 1d | awk '{ print $3 }')
-}
-
-function docker-machine-insecure-registry() {
-
-  set -x
-
-  docker-machine create --driver virtualbox --engine-insecure-registry $2 $1
 }
 
 alias dc=docker-compose
