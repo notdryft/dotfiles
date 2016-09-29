@@ -32,7 +32,7 @@ function docker-mrproper() {
 
   set -x
 
-  docker rmi -f $(docker images | sed 1d | awk '{ print $3 }')
+  docker rmi -f $(docker images -a -q)
 }
 
 alias dc=docker-compose
@@ -43,10 +43,10 @@ alias dpa='docker ps -a -q'
 alias dps='docker ps'
 alias dl='docker logs'
 alias dm=docker-machine
-alias dn='docker network'
 alias dmc="dm create --driver virtualbox $1"
 alias dmci=docker-machine-insecure-registry
 alias dmp=docker-mrproper
+alias dn='docker network'
 alias dr='docker run'
 alias drm=docker-rm
 alias drma=docker-rm-all
