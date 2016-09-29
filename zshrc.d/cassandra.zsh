@@ -1,10 +1,18 @@
 cassandra_version="3.7"
 
-export PATH=/opt/apache-cassandra-${cassandra_version}/bin:$PATH
-export PATH=/opt/apache-cassandra-${cassandra_version}/tools/bin:$PATH
+export PATH=/opt/cassandra/bin:$PATH
+export PATH=/opt/cassandra/tools/bin:$PATH
+
+function clean-cassandra() {
+  rm -rf /opt/cassandra/data
+}
+
+function stop-cassandra() {
+  pgrep -f cassandra | xargs kill -9
+}
 
 function reset-cassandra() {
-  pgrep -f cassandra | xargs kill -9 && \
-    rm -rf /opt/apache-cassandra-${cassandra_version}/data && \
+  stop-cassandra && \
+    clean-cassandra && \
     cassandra
 }
