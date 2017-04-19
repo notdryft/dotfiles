@@ -1,16 +1,16 @@
-export PATH=/opt/cassandra/bin:$PATH
-export PATH=/opt/cassandra/tools/bin:$PATH
+#export PATH=/opt/cassandra/bin:$PATH
+#export PATH=/opt/cassandra/tools/bin:$PATH
 
 function clean-cassandra() {
-  rm -rf /opt/cassandra/data
+  rm -rf /usr/local/var/lib/cassandra/data
 }
 
 function stop-cassandra() {
-  pgrep -f cassandra | xargs kill -9
+  brew services stop cassandra
 }
 
 function reset-cassandra() {
   stop-cassandra && \
     clean-cassandra && \
-    cassandra
+    brew services start cassandra
 }
