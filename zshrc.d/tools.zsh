@@ -15,6 +15,7 @@ function touch-chmod() {
 }
 
 alias catp=cat-pbcopy
+alias grepa='ls -al | grep "@"'
 alias p=pwd-pbcopy
 alias realp=realpath-pbcopy
 alias tc=touch-chmod
