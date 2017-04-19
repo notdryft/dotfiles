@@ -1,0 +1,1 @@
+alias apdf=asciidoctor-pdf
