@@ -49,7 +49,7 @@ plugins=(
   brew
   bower npm
   git github svn
-  java mvn
+  java
   perl
   python
   ruby bundler rails rake
