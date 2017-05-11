@@ -6,7 +6,7 @@ font pango:"Operator Mono" 8
 floating_modifier $mod
 
 # Start a terminal on the urxvt daemon process
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec urxvt256c
 
 # Kill focused window
 bindsym $mod+Shift+q kill
