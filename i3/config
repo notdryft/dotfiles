@@ -5,8 +5,8 @@ font pango:"Operator Mono" 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# Start a terminal on the urxvt daemon process
+bindsym $mod+Return exec urxvtc
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -124,3 +124,4 @@ new_window none
 # Custom scripts to start with i3
 
 exec --no-startup-id feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers > /dev/null 2>&1
+exec --no-startup-id urxvtd --quiet --opendisplay --fork
