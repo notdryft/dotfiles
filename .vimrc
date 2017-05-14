@@ -9,8 +9,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Bundle 'vim-ruby/vim-ruby'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'ensime/ensime-vim'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
 
