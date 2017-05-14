@@ -1,3 +1,10 @@
+case "`uname -s`" in
+  Linux)
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+    ;;
+esac
+
 function cat-pbcopy() {
   cat "$1" | pbcopy
 }
