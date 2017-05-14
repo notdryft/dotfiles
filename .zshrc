@@ -49,10 +49,12 @@ plugins=(
   brew
   bower npm
   git github svn
+  golang
   java
   perl
   python
   ruby bundler rails rake
+  rust cargo
   scala sbt
 )
 
