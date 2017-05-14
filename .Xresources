@@ -1,66 +1,76 @@
-URxvt.geometry:             90x30
+! https://wiki.gentoo.org/wiki/Rxvt-unicode
 
-! Text
-
-URxvt.lineSpace: 0
-
-! Rendering
+*termName: rxvt-unicode-256color
 
 Xft.antialias: true
 Xft.dpi:       96
 Xft.hinting:   true
 Xft.hintstyle: hintslight
-Xft.rgba:      rgb
+
+URxvt.depth: 32
+URxvt*dynamicColors: on
+URxvt*fading: 0
+URxvt*scrollBar: false
+
+URxvt*boldFont: xft:Operator Mono:style=Bold:size=10
+URxvt*boldItalicFont: xft:Operator Mono:style=Bold Italic:size=10
+URxvt*font: xft:Operator Mono:style=Book:size=10
+URxvt*italicFont: xft:Operator Mono:style=Book Italic:size=10
 
 ! Colors
 
-URxvt.depth:                32
-URxvt*dynamicColors:        on
-URxvt*fading:               0
+URxvt*background: rgba:1c00/1c00/1c00/ee00
+URxvt*foreground: #839496
 
-URxvt*font: xft:Operator Mono:style=Book:size=10
-URxvt*boldFont: xft:Operator Mono:style=Bold:size=10
-URxvt*boldItalicFont: xft:Operator Mono:style=Bold Italic:size=10
-URxvt*italicFont: xft:Operator Mono:style=Book Italic:size=10
+URxvt.cursorBlink: true
+URxvt.cursorColor: #859901
 
-URxvt*foreground: white
-URxvt*background: black
+!! Black
+*color0:  #003541
+*color8:  #003541
 
-URxvt*transparent: true
-URxvt*shading: 30
+!! Red
+*color1:  #dc322f
+*color9:  #dc322f
 
-*color0:  #2E3436
-*color1:  #a40000
-*color2:  #4E9A06
-*color3:  #C4A000
-*color4:  #3465A4
-*color5:  #75507B
-*color6:  #ce5c00
-*color7:  #babdb9
-*color8:  #555753
-*color9:  #EF2929
-*color10: #8AE234
-*color11: #FCE94F
-*color12: #729FCF
-*color13: #AD7FA8
-*color14: #fcaf3e
-*color15: #EEEEEC
+!! Green
+*color2:  #859901
+*color10: #859901
+
+!! Yellow
+*color3:  #b58901
+*color11: #b58901
+
+!! Blue
+*color4:  #268bd2
+*color12: #268bd2
+
+!! Magenta
+*color5:  #d33682
+*color13: #d33682
+
+!! Cyan
+*color6:  #2aa198
+*color14: #2aa198
+
+!! White
+*color7:  #eee8d5
+*color15: #fdf6e3
+
+!URxvt.lineSpace: 0
 
 ! Scroll on non-special key press
-URxvt*scrollTtyKeypress:    true
+!URxvt*scrollTtyKeypress:    true
 ! Do not scroll to bottom when tty receives output
-URxvt*scrollTtyOutput:      false
+!URxvt*scrollTtyOutput:      false
 ! Scroll with scrollback buffer when tty recieves new lines,
-URxvt*scrollWithBuffer:     true
+!URxvt*scrollWithBuffer:     true
 ! For speed. When receiving lots of lines, urxvt will only scroll once
 ! in a while (around 60x/sec), resulting in fewer updates. This can
 ! result in urxvt not ever displaying some of the lines it receives
-URxvt*skipScroll:  true
+!URxvt*skipScroll:  true
 
-URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            false
+!URxvt.scrollStyle:          rxvt
 
-URxvt.saveLines:            4095
-URxvt.internalBorder:       0
-
-URxvt*termName: rxvt-unicode
+!URxvt.saveLines:            4095
+!URxvt.internalBorder:       0
