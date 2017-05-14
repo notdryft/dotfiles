@@ -123,6 +123,7 @@ new_window none
 
 # Custom scripts to start with i3
 
+exec --no-startup-id compton --config ~/.config/compton/config
 exec --no-startup-id dropbox start
 exec --no-startup-id feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers > /dev/null 2>&1
-exec --no-startup-id urxvtd --quiet --opendisplay --fork
+exec --no-startup-id urxvt256cd --quiet --opendisplay --fork
