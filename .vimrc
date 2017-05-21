@@ -8,13 +8,13 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Bundle 'vim-ruby/vim-ruby'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plugin 'ensime/ensime-vim'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
+Bundle 'vim-ruby/vim-ruby'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()
 filetype plugin indent on
@@ -31,8 +31,8 @@ set tabstop=2    " Tab by 2 spaces
 
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+set t_Co=256
+colorscheme PaperColor
 
 " Buffers
 
