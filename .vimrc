@@ -6,14 +6,14 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Bundle 'vim-ruby/vim-ruby'
 
 Plugin 'derekwyatt/vim-scala'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plugin 'ensime/ensime-vim'
 Plugin 'fatih/vim-go'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
-Bundle 'vim-ruby/vim-ruby'
 Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()
