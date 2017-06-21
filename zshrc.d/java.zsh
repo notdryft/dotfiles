@@ -1,6 +1,6 @@
 case "`uname -s`" in
   Darwin)
-    java_version="1.8.0_121"
+    java_version="1.8.0_131"
 
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
     export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk${java_version}.jdk/Contents/Home
