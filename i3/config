@@ -114,6 +114,7 @@ bar {
 
 # Add some padding
 gaps inner 32
+smart_borders on
 
 # Force xinerama compatibility mode
 force_xinerama yes
