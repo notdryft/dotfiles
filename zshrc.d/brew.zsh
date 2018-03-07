@@ -4,8 +4,7 @@ function buuc() {
     brew cleanup -s && \
     brew cask cleanup && \
     brew doctor && \
-    brew missing && \
-    apm upgrade -c false
+    brew missing
 }
 
 alias bsl='brew services list'
