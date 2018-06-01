@@ -56,6 +56,7 @@ plugins=(
   ruby bundler rails rake
   rust cargo
   scala sbt
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
