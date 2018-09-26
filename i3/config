@@ -105,9 +105,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar with icons on first screen
 bar {
-        status_command i3blocks
-        # https://i3wm.org/docs/multi-monitor.html
-        tray_output xinerama-0
+  i3bar_command $HOME/.config/polybar/launch.sh
 }
 
 # Custom options
