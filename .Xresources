@@ -12,10 +12,10 @@ URxvt*dynamicColors: on
 URxvt*fading: 0
 URxvt*scrollBar: false
 
-URxvt*boldFont: xft:Operator Mono:style=Bold:size=10
-URxvt*boldItalicFont: xft:Operator Mono:style=Bold Italic:size=10
-URxvt*font: xft:Operator Mono:style=Book:size=10
-URxvt*italicFont: xft:Operator Mono:style=Book Italic:size=10
+URxvt*boldFont: xft:Iosevka SS09:style=Bold:size=12
+URxvt*boldItalicFont: xft:Iosevka SS09:style=Bold Italic:size=12
+URxvt*font: xft:Iosevka SS09:style=Book:size=12
+URxvt*italicFont: xft:Iosevka SS09:style=Book Italic:size=12
 
 ! Colors
 

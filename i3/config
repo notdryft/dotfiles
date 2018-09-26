@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:"Operator Mono" 8
+font pango:"Iosevka SS09" 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
