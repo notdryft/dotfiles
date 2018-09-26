@@ -11,8 +11,8 @@ bindsym $mod+Return exec urxvt256c
 # Kill focused window
 bindsym $mod+Shift+q kill
 
-# Start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# Start rofi
+bindsym $mod+d exec rofi -show run -theme sidebar
 
 # Alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
