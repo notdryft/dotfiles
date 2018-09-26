@@ -111,7 +111,7 @@ bar {
 # Custom options
 
 # Add some padding
-gaps inner 32
+gaps inner 24
 smart_borders on
 
 # Force xinerama compatibility mode
