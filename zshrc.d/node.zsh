@@ -6,7 +6,7 @@ case "`uname -s`" in
 esac
 
 function npm-latest() {
- npm i -g $1@$(npm show yarn versions --json | jq -r '.[-1]')
+ npm i -g $1@$(npm show $1 versions --json | jq -r '.[-1]')
 }
 
 alias npmu='for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f4); do npm -g install "$package"; done'
