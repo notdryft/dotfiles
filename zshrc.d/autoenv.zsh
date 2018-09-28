@@ -3,6 +3,6 @@ case "`uname -s`" in
     source /usr/local/opt/autoenv/activate.sh
     ;;
   Linux)
-    source ~/.autoenv/activate.sh
+    eval "$(direnv hook zsh)"
     ;;
 esac
