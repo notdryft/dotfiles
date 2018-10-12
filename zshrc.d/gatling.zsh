@@ -66,15 +66,6 @@ function tmux-gatling() {
   tmux send-keys "cd ${automation_dir}/docker && clear" C-m
   tmux select-pane -t 0
 
-  # Vagrant window
-
-  tmux new-window \
-    -c ${automation_dir}/vagrant \
-    -n vagrant
-  tmux split-window -h
-  tmux send-keys "cd ${automation_dir}/vagrant && clear" C-m
-  tmux select-pane -t 0
-
   # Go back to Frontline:API pane and attach
 
   tmux select-window -t frontline
