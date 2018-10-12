@@ -35,15 +35,15 @@ function tmux-gatling() {
   tmux split-window
   tmux send-keys "cd ${dashboard_dir} && clear" C-m
 
-  # Build plugin window
+  # Test window
 
-  build_dir=${root_dir}/build
+  test_dir=${root_dir}/pro/frontline-test
 
   tmux new-window \
-    -c ${build_dir}/gatling-build-plugin \
-    -n build
+    -c ${test_dir} \
+    -n test
   tmux split-window -h
-  tmux send-keys "cd ${build_dir}/gatling-build-plugin && clear" C-m
+  tmux send-keys "cd ${test_dir} && clear" C-m
   tmux select-pane -t 0
 
   # Ansible window
