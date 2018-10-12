@@ -1,7 +1,12 @@
 function luuc() {
   rustup self update && \
     rustup update && \
-    dru
+    dru && \
+    dra
+}
+
+function dra() {
+  sudo dnf autoremove
 }
 
 function dru() {
