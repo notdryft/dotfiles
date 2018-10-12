@@ -87,3 +87,5 @@ export TERM=xterm-256color
 for conf in $HOME/.dotfiles/zshrc.d/*; do
   source $conf
 done
+
+fpath+=$HOME/.zfunctions
