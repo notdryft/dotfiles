@@ -1,4 +1,2 @@
 --memcheck:leak-check=full
 --show-reachable=yes
---suppressions=/Users/notdryft/.dotfiles/valgrind.d/darwin15.supp
---suppressions=/Users/notdryft/.dotfiles/valgrind.d/additions.supp
