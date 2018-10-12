@@ -1,6 +1,7 @@
+set $alt Mod1
 set $mod Mod4
 
-font pango:"Iosevka SS09" 10
+font pango: "System San Francisco Display" 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -12,18 +13,18 @@ bindsym $mod+Return exec urxvt256c
 bindsym $mod+Shift+q kill
 
 # Start rofi
-bindsym $mod+d exec rofi -show run -theme sidebar
+bindsym $mod+space exec rofi -show run -theme sidebar
 
 # Alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 # Move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 # Split in horizontal orientation
@@ -52,29 +53,41 @@ bindsym $mod+q focus parent
 # Focus the child container
 #bindsym $mod+d focus child
 
+# Workspaces
+set $workspace1  "1:  Home"
+set $workspace2  "2:  Chrome"
+set $workspace3  "3:  Code"
+set $workspace4  "4:  Terminals"
+set $workspace5  "5: "
+set $workspace6  "6: "
+set $workspace7  "7: "
+set $workspace8  "8:  Slack"
+set $workspace9  "9:  Discord"
+set $workspace10 "10:  Spotify"
+
 # Switch to workspace
-bindsym $mod+ampersand workspace 1
-bindsym $mod+eacute workspace 2
-bindsym $mod+quotedbl workspace 3
-bindsym $mod+apostrophe workspace 4
-bindsym $mod+parenleft workspace 5
-bindsym $mod+minus workspace 6
-bindsym $mod+egrave workspace 7
-bindsym $mod+underscore workspace 8
-bindsym $mod+ccedilla workspace 9
-bindsym $mod+agrave workspace 10
+bindsym $mod+ampersand  workspace $workspace1
+bindsym $mod+eacute     workspace $workspace2
+bindsym $mod+quotedbl   workspace $workspace3
+bindsym $mod+apostrophe workspace $workspace4
+bindsym $mod+parenleft  workspace $workspace5
+bindsym $mod+minus      workspace $workspace6
+bindsym $mod+egrave     workspace $workspace7
+bindsym $mod+underscore workspace $workspace8
+bindsym $mod+ccedilla   workspace $workspace9
+bindsym $mod+agrave     workspace $workspace10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+eacute move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+egrave move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+ccedilla move container to workspace 9
-bindsym $mod+Shift+agrave move container to workspace 10
+bindsym $mod+Shift+1        move container to workspace $workspace1
+bindsym $mod+Shift+eacute   move container to workspace $workspace2
+bindsym $mod+Shift+3        move container to workspace $workspace3
+bindsym $mod+Shift+4        move container to workspace $workspace4
+bindsym $mod+Shift+5        move container to workspace $workspace5
+bindsym $mod+Shift+6        move container to workspace $workspace6
+bindsym $mod+Shift+egrave   move container to workspace $workspace7
+bindsym $mod+Shift+8        move container to workspace $workspace8
+bindsym $mod+Shift+ccedilla move container to workspace $workspace9
+bindsym $mod+Shift+agrave   move container to workspace $workspace10
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -93,9 +106,9 @@ mode "resize" {
   # Pressing right will grow the window’s width.
   # Pressing up will shrink the window’s height.
   # Pressing down will grow the window’s height.
-  bindsym Left resize shrink width 10 px or 10 ppt
-  bindsym Down resize grow height 10 px or 10 ppt
-  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Left  resize shrink width 10 px or 10 ppt
+  bindsym Down  resize grow height 10 px or 10 ppt
+  bindsym Up    resize shrink height 10 px or 10 ppt
   bindsym Right resize grow width 10 px or 10 ppt
 
   # Back to normal: Enter or Escape
@@ -117,15 +130,27 @@ gaps inner 24
 smart_borders on
 
 # Force xinerama compatibility mode
-force_xinerama yes
+#force_xinerama yes
 
 # Remove border on newly created windows
 new_window none
 
+# Workspace assignments
+
+assign [class="Slack"] $workspace8
+assign [class="discord"] $workspace9
+for_window [class="Spotify"] move to workspace $workspace10
+
 # Custom scripts to start with i3
+
+bindsym $mod+b exec feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers
+
+bindsym           $alt+Shift+quotedbl   exec ~/.dotfiles/scripts/screenshot.sh
+bindsym --release $alt+Shift+apostrophe exec ~/.dotfiles/scripts/screenshot.sh --select
 
 exec --no-startup-id compton --config ~/.config/compton/config
 exec --no-startup-id dropbox start
-exec --no-startup-id feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers > /dev/null 2>&1
-exec --no-startup-id xinput set-prop 10 256 -30 30
+exec --no-startup-id xinput set-prop 10 259 1
 exec --no-startup-id urxvt256cd --quiet --opendisplay --fork
+
+exec_always --no-startup-id feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers > /dev/null 2>&1

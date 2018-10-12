@@ -12,10 +12,10 @@ URxvt*dynamicColors: on
 URxvt*fading: 0
 URxvt*scrollBar: false
 
-URxvt*boldFont: xft:Iosevka SS09:style=Bold:size=12
-URxvt*boldItalicFont: xft:Iosevka SS09:style=Bold Italic:size=12
-URxvt*font: xft:Iosevka SS09:style=Book:size=12
-URxvt*italicFont: xft:Iosevka SS09:style=Book Italic:size=12
+URxvt*boldFont: xft:Iosevka SS09:style=Bold:size=12, xft:Font Awesome 5 Free Solid:size=12
+URxvt*boldItalicFont: xft:Iosevka SS09:style=Bold Italic:size=12, xft:Font Awesome 5 Free Solid:size=12
+URxvt*font: xft:Iosevka SS09:style=Book:size=12, xft:Font Awesome 5 Free Solid:size=12
+URxvt*italicFont: xft:Iosevka SS09:style=Book Italic:size=12, xft:Font Awesome 5 Free Solid:size=12
 
 ! Colors
 
