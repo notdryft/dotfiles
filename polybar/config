@@ -124,32 +124,32 @@ label-urgent-padding = 3
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU
+label = 
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 0
-ramp-coreload-0-foreground = #aaff77
+ramp-coreload-0-foreground = #859901
 ramp-coreload-1 = ▂
 ramp-coreload-1-font = 0
-ramp-coreload-1-foreground = #aaff77
+ramp-coreload-1-foreground = #859901
 ramp-coreload-2 = ▃
 ramp-coreload-2-font = 0
-ramp-coreload-2-foreground = #aaff77
+ramp-coreload-2-foreground = #859901
 ramp-coreload-3 = ▄
 ramp-coreload-3-font = 0
-ramp-coreload-3-foreground = #aaff77
+ramp-coreload-3-foreground = #859901
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 0
-ramp-coreload-4-foreground = #fba922
+ramp-coreload-4-foreground = #b58901
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 0
-ramp-coreload-5-foreground = #fba922
+ramp-coreload-5-foreground = #b58901
 ramp-coreload-6 = ▇
 ramp-coreload-6-font = 0
-ramp-coreload-6-foreground = #ff5555
+ramp-coreload-6-foreground = #dc322f
 ramp-coreload-7 = █
 ramp-coreload-7-font = 0
-ramp-coreload-7-foreground = #ff5555
+ramp-coreload-7-foreground = #dc322f
 
 [module/date]
 type = internal/date
@@ -159,21 +159,21 @@ date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 [module/memory]
 type = internal/memory
 format = <label> <bar-used>
-label = RAM
+label = 
 
 bar-used-width = 30
-bar-used-foreground-0 = #aaff77
-bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
-bar-used-indicator = |
+bar-used-foreground-0 = #859901
+bar-used-foreground-1 = #859901
+bar-used-foreground-2 = #b58901
+bar-used-foreground-3 = #dc322f
+bar-used-indicator = 
 bar-used-indicator-font = 0
-bar-used-indicator-foreground = #ff
+bar-used-indicator-foreground = #268bd2
 bar-used-fill = ─
 bar-used-fill-font = 0
 bar-used-empty = ─
 bar-used-empty-font = 0
-bar-used-empty-foreground = #444444
+bar-used-empty-foreground = #333
 
 [module/mpd]
 type = internal/mpd
