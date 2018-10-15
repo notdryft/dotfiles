@@ -208,9 +208,9 @@ interface = wlp59s0
 interval = 3.0
 ping-interval = 10
 
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
-label-disconnected =  not connected
+format-connected = <ramp-signal><label-connected>
+label-connected = %ifname%/%essid%    %upspeed%   %downspeed%
+label-disconnected =   not connected
 label-disconnected-foreground = #66
 
 ramp-signal-0 = 
@@ -230,7 +230,7 @@ type = internal/network
 interface = enp58s0u1
 interval = 3.0
 
-label-connected =    %{T3}%local_ip%%{T-}
+label-connected =  %ifname%/%local_ip%    %upspeed%   %downspeed%   %linkspeed%
 label-disconnected-foreground = #66
 
 [module/volume]
