@@ -88,11 +88,11 @@ bar-capacity-empty = █
 bar-capacity-empty-font = 0
 bar-capacity-empty-foreground = #44ffffff
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = ac10
+animation-charging-1 = ac11
+animation-charging-2 = ac12
+animation-charging-3 = ac13
+animation-charging-4 = ac14
 animation-charging-framerate = 750
 
 [module/i3]
