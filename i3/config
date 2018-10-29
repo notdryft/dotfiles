@@ -150,9 +150,9 @@ bindsym $mod+b exec feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers
 bindsym           $alt+Shift+quotedbl   exec ~/.dotfiles/scripts/screenshot.sh
 bindsym --release $alt+Shift+apostrophe exec ~/.dotfiles/scripts/screenshot.sh --select
 
-exec --no-startup-id compton --config ~/.config/compton/config
 exec --no-startup-id dropbox start
 exec --no-startup-id xinput set-prop 10 259 1
 exec --no-startup-id urxvt256cd --quiet --opendisplay --fork
 
+exec_always --no-startup-id compton --config ~/.config/compton/config
 exec_always --no-startup-id feh --randomize --bg-fill ~/Dropbox/Canti/Wallpapers > /dev/null 2>&1
