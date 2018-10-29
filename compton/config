@@ -19,6 +19,7 @@ shadow-exclude = [
 ];
 opacity-rule = [
   "99:class_g *= 'chrome'",
+  "99:class_g = 'jetbrains-idea-ce'",
   "99:class_g = 'vlc'"
 ];
 # shadow-exclude = "n:e:Notification";
