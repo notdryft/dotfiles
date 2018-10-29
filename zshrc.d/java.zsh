@@ -8,7 +8,7 @@ case "`uname -s`" in
     ;;
   Linux)
     java_short_version="1.8.0"
-    java_version="${java_short_version}.181.b15-5"
+    java_version="${java_short_version}.181.b15-6"
 
     export JAVA_HOME=/usr/lib/jvm/java-${java_short_version}-openjdk-${java_version}.fc28.x86_64
     export JDK_HOME=/usr/lib/jvm/java-${java_short_version}-openjdk-${java_version}.fc28.x86_64
@@ -16,4 +16,8 @@ case "`uname -s`" in
     ;;
 esac
 
-export PATH=${JAVA_HOME}/bin:$PATH
+if [ ! -d "$JAVA_HOME/bin" ]; then
+  echo "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME"
+fi
+
+export PATH=$JAVA_HOME/bin:$PATH
