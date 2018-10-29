@@ -28,6 +28,16 @@ function docker-rm-all() {
     docker rm $(docker ps -a -q)
 }
 
+function docker-rm-none() {
+
+  set -x
+
+  docker images | \
+    grep '<none>' | \
+    awk '{ print $3 }' | \
+    xargs docker rmi
+}
+
 function docker-mrproper() {
 
   set -x
@@ -51,3 +61,4 @@ alias dr='docker run'
 alias drm=docker-rm
 alias drma=docker-rm-all
 alias drmi='docker rmi -f'
+alias drmn=docker-rm-none
