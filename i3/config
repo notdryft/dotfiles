@@ -60,8 +60,8 @@ set $workspace3  "3:  Code"
 set $workspace4  "4:  Terminals"
 set $workspace5  "5: "
 set $workspace6  "6: "
-set $workspace7  "7: "
-set $workspace8  "8:  Slack"
+set $workspace7  "7:  Slack"
+set $workspace8  "8:  Steam"
 set $workspace9  "9:  Discord"
 set $workspace10 "10:  Spotify"
 
@@ -137,8 +137,10 @@ new_window none
 
 # Workspace assignments
 
-assign [class="Slack"] $workspace8
+assign [class="Slack"]   $workspace7
+assign [class="Steam"]   $workspace8
 assign [class="discord"] $workspace9
+
 for_window [class="Spotify"] move to workspace $workspace10
 
 # Custom scripts to start with i3
