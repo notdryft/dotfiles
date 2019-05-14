@@ -8,13 +8,14 @@ call vundle#begin()
 
 Bundle 'vim-ruby/vim-ruby'
 
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plugin 'ensime/ensime-vim'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -63,3 +64,22 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
+" Scalafmt
+
+noremap <C-d> :sh<cr>
+
+noremap <leader>f :Autoformat<cr>
+let g:formatdef_scalafmt = "'scalafmt'"
+let g:formatters_scala = ['scalafmt']
+
+" Syntastic
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
