@@ -1,3 +1,7 @@
+function ec2() {
+  ssh -i ~/.ssh/gatling/aws/$1/id_$2 ec2-user@$3
+}
+
 function tmux-gatling() {
   session_name=gatling
   root_dir=~/Code/gatling
@@ -9,8 +13,8 @@ function tmux-gatling() {
   tmux new -d \
     -s ${session_name} \
     -c ${root_dir}/core/gatling \
-    -n core
-  tmux rename-window core
+    -n gatling
+  tmux rename-window gatling
   tmux split-window -h
   tmux send-keys "cd ${root_dir}/core/gatling-highcharts-private && clear" C-m
   tmux select-pane -t 0
@@ -35,35 +39,44 @@ function tmux-gatling() {
   tmux split-window
   tmux send-keys "cd ${dashboard_dir} && clear" C-m
 
-  # Test window
+  # Simulations window
 
-  test_dir=${root_dir}/pro/frontline-test
+  simulations_dir=${root_dir}/pro/frontline-test
 
   tmux new-window \
-    -c ${test_dir} \
-    -n test
+    -c ${simulations_dir} \
+    -n simulations
   tmux split-window -h
-  tmux send-keys "cd ${test_dir} && clear" C-m
+  tmux send-keys "cd ${simulations_dir} && clear" C-m
   tmux select-pane -t 0
 
-  # Ansible window
+  # Formulas window
 
   automation_dir=${root_dir}/automation
 
   tmux new-window \
-    -c ${automation_dir}/ansible \
-    -n ansible
+    -c ${automation_dir}/formulas \
+    -n formulas
   tmux split-window -h
-  tmux send-keys "cd ${automation_dir}/ansible && clear" C-m
+  tmux send-keys "cd ${automation_dir}/formulas && clear" C-m
   tmux select-pane -t 0
 
-  # Docker window
+  # Installer window
 
   tmux new-window \
-    -c ${automation_dir}/docker \
-    -n docker
+    -c ${automation_dir}/installer \
+    -n installer
   tmux split-window -h
-  tmux send-keys "cd ${automation_dir}/docker && clear" C-m
+  tmux send-keys "cd ${automation_dir}/installer && clear" C-m
+  tmux select-pane -t 0
+
+  # Containers window
+
+  tmux new-window \
+    -c ${automation_dir}/containers \
+    -n containers
+  tmux split-window -h
+  tmux send-keys "cd ${automation_dir}/containers && clear" C-m
   tmux select-pane -t 0
 
   # Go back to Frontline:API pane and attach
