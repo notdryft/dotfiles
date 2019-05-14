@@ -27,6 +27,10 @@ bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
+# Move focused window to different outpu
+bindsym $mod+Control+Shift+Left move workspace to output left
+bindsym $mod+Control+Shift+Right move workspace to output right
+
 # Split in horizontal orientation
 bindsym $mod+h split h
 
@@ -58,8 +62,8 @@ set $workspace1  "1:  Home"
 set $workspace2  "2:  Chrome"
 set $workspace3  "3:  Code"
 set $workspace4  "4:  Terminals"
-set $workspace5  "5: "
-set $workspace6  "6: "
+set $workspace5  "5:  Terminals"
+set $workspace6  "6:  Metrics"
 set $workspace7  "7:  Slack"
 set $workspace8  "8:  Steam"
 set $workspace9  "9:  Discord"
@@ -137,9 +141,11 @@ new_window none
 
 # Workspace assignments
 
-assign [class="Slack"]   $workspace7
-assign [class="Steam"]   $workspace8
-assign [class="discord"] $workspace9
+assign [class="Mattermost"] $workspace7
+assign [class="Slack"]      $workspace7
+assign [class="Steam"]      $workspace8
+assign [class="Skype"]      $workspace9
+assign [class="discord"]    $workspace9
 
 for_window [class="Spotify"] move to workspace $workspace10
 
@@ -151,7 +157,7 @@ bindsym           $alt+Shift+quotedbl   exec ~/.dotfiles/scripts/screenshot.sh
 bindsym --release $alt+Shift+apostrophe exec ~/.dotfiles/scripts/screenshot.sh --select
 
 exec --no-startup-id dropbox start
-exec --no-startup-id xinput set-prop 10 259 1
+exec --no-startup-id xinput set-prop 12 $(xinput list-props 12 | perl -n -e'/Natural Scrolling Enabled \((\d+)\)/ && print $1') 1
 exec --no-startup-id urxvt256cd --quiet --opendisplay --fork
 
 exec_always --no-startup-id compton --config ~/.config/compton/config
