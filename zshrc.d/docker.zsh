@@ -62,3 +62,4 @@ alias drm=docker-rm
 alias drma=docker-rm-all
 alias drmi='docker rmi -f'
 alias drmn=docker-rm-none
+alias dv='docker volume'
