@@ -17,12 +17,8 @@ function realpath-pbcopy() {
   realpath "$1" | pbcopy
 }
 
-function touch-chmod() {
-  touch "$1" && chmod u+x "$1"
-}
-
+alias cat=bat
 alias catp=cat-pbcopy
 alias grepa='ls -al | grep "@"'
 alias p=pwd-pbcopy
 alias realp=realpath-pbcopy
-alias tc=touch-chmod
