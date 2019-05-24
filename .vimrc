@@ -8,12 +8,12 @@ call vundle#begin()
 
 Bundle 'vim-ruby/vim-ruby'
 
-Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Plugin 'ensime/ensime-vim'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/Vundle.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
 
@@ -31,9 +31,12 @@ set shiftwidth=2 " Indent by 2 spaces
 set tabstop=2    " Tab by 2 spaces
 
 syntax enable
+
 set background=dark
 set t_Co=256
-colorscheme PaperColor
+
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
 " Buffers
 
