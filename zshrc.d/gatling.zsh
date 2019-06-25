@@ -50,18 +50,9 @@ function tmux-gatling() {
   tmux send-keys "cd ${simulations_dir} && clear" C-m
   tmux select-pane -t 0
 
-  # Formulas window
+  # Installer window
 
   automation_dir=${root_dir}/automation
-
-  tmux new-window \
-    -c ${automation_dir}/formulas \
-    -n formulas
-  tmux split-window -h
-  tmux send-keys "cd ${automation_dir}/formulas && clear" C-m
-  tmux select-pane -t 0
-
-  # Installer window
 
   tmux new-window \
     -c ${automation_dir}/installer \
