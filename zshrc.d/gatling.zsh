@@ -39,17 +39,6 @@ function tmux-gatling() {
   tmux split-window
   tmux send-keys "cd ${dashboard_dir} && clear" C-m
 
-  # Simulations window
-
-  simulations_dir=${root_dir}/pro/frontline-test
-
-  tmux new-window \
-    -c ${simulations_dir} \
-    -n simulations
-  tmux split-window -h
-  tmux send-keys "cd ${simulations_dir} && clear" C-m
-  tmux select-pane -t 0
-
   # Installer window
 
   automation_dir=${root_dir}/automation
