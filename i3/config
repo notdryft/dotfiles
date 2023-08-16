@@ -7,13 +7,14 @@ font pango: "System San Francisco Display" 10
 floating_modifier $mod
 
 # Start a terminal on the urxvt daemon process
-bindsym $mod+Return exec urxvt256c
+bindsym $mod+Return       exec urxvt256c -name __scratchpad
+bindsym $mod+Shift+Return exec urxvt256c
 
 # Kill focused window
 bindsym $mod+Shift+q kill
 
 # Start rofi
-bindsym $mod+space exec rofi -show run -theme sidebar
+bindsym $mod+space exec rofi -show run -theme sidetab-pimped
 
 # Alternatively, you can use the cursor keys:
 bindsym $mod+Left  focus left
@@ -27,7 +28,7 @@ bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
-# Move focused window to different outpu
+# Move focused window to different output
 bindsym $mod+Control+Shift+Left move workspace to output left
 bindsym $mod+Control+Shift+Right move workspace to output right
 
@@ -58,16 +59,16 @@ bindsym $mod+q focus parent
 #bindsym $mod+d focus child
 
 # Workspaces
-set $workspace1  "1:  Home"
-set $workspace2  "2:  Chrome"
-set $workspace3  "3:  Code"
-set $workspace4  "4:  Terminals"
-set $workspace5  "5:  Terminals"
-set $workspace6  "6:  Metrics"
-set $workspace7  "7:  Slack"
-set $workspace8  "8:  Steam"
-set $workspace9  "9:  Discord"
-set $workspace10 "10:  Spotify"
+set $workspace1  "1  Home"
+set $workspace2  "2  Chrome"
+set $workspace3  "3  Code"
+set $workspace4  "4 "
+set $workspace5  "5 "
+set $workspace6  "6 "
+set $workspace7  "7  Slack"
+set $workspace8  "8  Steam"
+set $workspace9  "9  Discord"
+set $workspace10 "10  Spotify"
 
 # Switch to workspace
 bindsym $mod+ampersand  workspace $workspace1
@@ -129,9 +130,14 @@ bar {
 
 # Custom options
 
+#border_radius 12
+
 # Add some padding
 gaps inner 24
 smart_borders on
+
+for_window [class   = "^.*"] border pixel 0
+for_window [title   = "^.*"] border pixel 0
 
 # Force xinerama compatibility mode
 #force_xinerama yes
@@ -147,7 +153,14 @@ assign [class="Steam"]      $workspace8
 assign [class="Skype"]      $workspace9
 assign [class="discord"]    $workspace9
 
+# 1920 - 24 * 2 = 1872 - 1867 = 5 -> 58 + 2 = 60
+# 1080 - 34 - 27 - 24 * 2 = 972 - 964 = 8 -> 24 + 4 = 28
+for_window [instance="__scratchpad"] floating enable, resize set 1872px 966px, move position 24px 58px, move scratchpad, scratchpad show, sticky enable
 for_window [class="Spotify"] move to workspace $workspace10
+
+#for_window [class="Raycaster"] floating enable
+
+bindsym $mod+t scratchpad show
 
 # Custom scripts to start with i3
 
@@ -157,7 +170,8 @@ bindsym           $alt+Shift+quotedbl   exec ~/.dotfiles/scripts/screenshot.sh
 bindsym --release $alt+Shift+apostrophe exec ~/.dotfiles/scripts/screenshot.sh --select
 
 exec --no-startup-id dropbox start
-exec --no-startup-id xinput set-prop 12 $(xinput list-props 12 | perl -n -e'/Natural Scrolling Enabled \((\d+)\)/ && print $1') 1
+exec --no-startup-id dunst
+exec --no-startup-id xinput set-prop 13 $(xinput list-props 13 | perl -n -e'/Natural Scrolling Enabled \((\d+)\)/ && print $1') 1
 exec --no-startup-id urxvt256cd --quiet --opendisplay --fork
 
 exec_always --no-startup-id compton --config ~/.config/compton/config
