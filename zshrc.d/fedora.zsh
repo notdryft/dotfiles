@@ -1,8 +1,8 @@
 case "`uname -s`" in
   Linux)
     function luuc() {
-      flatpak update && \
-        rustup self update && \
+      #flatpak update
+      rustup self update && \
         rustup update && \
         dru && \
         dra
