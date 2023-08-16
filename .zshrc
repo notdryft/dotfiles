@@ -49,14 +49,13 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(
   brew
   bower npm
-  fedora
   git github svn
   golang
-  java
+  mvn
   perl
   python pip
   ruby bundler rails rake
-  rust cargo
+  rust
   scala sbt
   yarn
 )
