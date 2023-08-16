@@ -1,3 +1,4 @@
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 alias v=vagrant
 alias vd='vagrant destroy --force'
