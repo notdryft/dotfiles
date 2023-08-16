@@ -1,2 +1,7 @@
+alias gcpn='git cherry-pick --no-commit'
 alias gds='git diff --staged'
+alias gfap='gf --all --prune'
 alias gi='git commit --allow-empty -m "Initial commit"'
+alias grpo='git remote prune origin'
+alias gstas='git stash push --staged'
+alias gt='git tag'
