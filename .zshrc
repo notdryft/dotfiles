@@ -85,6 +85,8 @@ export TERM=xterm-256color
 
 # Custom paths
 
+eval $(/opt/homebrew/bin/brew shellenv)
+
 for conf in $HOME/.dotfiles/zshrc.d/*; do
   source $conf
 done
