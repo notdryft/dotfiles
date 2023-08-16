@@ -10,7 +10,7 @@ Bundle 'vim-ruby/vim-ruby'
 
 Plugin 'derekwyatt/vim-scala'
 Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
-Plugin 'ensime/ensime-vim'
+" Plugin 'ensime/ensime-vim'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'morhetz/gruvbox'
