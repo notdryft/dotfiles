@@ -7,55 +7,76 @@ Xft.dpi:       96
 Xft.hinting:   true
 Xft.hintstyle: hintslight
 
+URxvt.borderColor: rgba:1c00/1c00/1c00/ee00
 URxvt.depth: 32
 URxvt*dynamicColors: on
+URxvt.internalBorder: 12
 URxvt*fading: 0
 URxvt*scrollBar: false
+URxvt*scrollBar_right: false
 
-URxvt*boldFont: xft:Iosevka Term Slab:style=Bold:size=12, xft:Font Awesome 5 Free Solid:size=12
-URxvt*boldItalicFont: xft:Iosevka Term Slab:style=Bold Italic:size=12, xft:Font Awesome 5 Free Solid:size=12
-URxvt*font: xft:Iosevka Term Slab:style=Book:size=12, xft:Font Awesome 5 Free Solid:size=12
-URxvt*italicFont: xft:Iosevka Term Slab:style=Book Italic:size=12, xft:Font Awesome 5 Free Solid:size=12
+URxvt*boldFont: xft:Iosevka TermLig Slab:style=Bold:size=10, xft:Font Awesome 5 Free Solid:size=10
+URxvt*boldItalicFont: xft:Iosevka TermLig Slab:style=Bold Oblique:size=10, xft:Font Awesome 5 Free Solid:size=10
+URxvt*font: xft:Iosevka TermLig Slab:style=Semibold:size=10, xft:Font Awesome 5 Free Solid:size=10
+URxvt*italicFont: xft:Iosevka TermLig Slab:style=Semibold Oblique:size=10, xft:Font Awesome 5 Free Solid:size=10
 
 ! Colors
 
+!URxvt*background rgba:2800/2800/2800/ee00
 URxvt*background: rgba:1c00/1c00/1c00/ee00
-URxvt*foreground: #839496
+URxvt*foreground: #d5c4a1
+!URxvt*foreground: #839496
 
 URxvt.cursorBlink: true
 URxvt.cursorColor: #859901
 
 !! Black
-*color0:  #003541
-*color8:  #003541
+*color0:  #282828
+*color8:  #928374
+!*color0:  #003541
+!*color8:  #003541
 
 !! Red
-*color1:  #dc322f
-*color9:  #dc322f
+*color1:  #cc241d
+*color9:  #fb4934
+!*color1:  #dc322f
+!*color9:  #dc322f
 
 !! Green
-*color2:  #859901
-*color10: #859901
+*color2:  #98971a
+*color10: #b8bb26
+!*color2:  #859901
+!*color10: #859901
 
 !! Yellow
-*color3:  #b58901
-*color11: #b58901
+*color3:  #d79921
+*color11: #fabd2f
+!*color3:  #b58901
+!*color11: #b58901
 
 !! Blue
-*color4:  #268bd2
-*color12: #268bd2
+*color4:  #458588
+*color12: #83a598
+!*color4:  #268bd2
+!*color12: #268bd2
 
 !! Magenta
-*color5:  #d33682
-*color13: #d33682
+*color5:  #b16286
+*color13: #d3869b
+!*color5:  #d33682
+!*color13: #d33682
 
 !! Cyan
-*color6:  #2aa198
-*color14: #2aa198
+*color6:  #689d6a
+*color14: #8ec07c
+!*color6:  #2aa198
+!*color14: #2aa198
 
 !! White
-*color7:  #eee8d5
-*color15: #fdf6e3
+*color7:  #a89984
+*color15: #ebdbb2
+!*color7:  #eee8d5
+!*color15: #fdf6e3
 
 !URxvt.lineSpace: 0
 
@@ -71,6 +92,4 @@ URxvt.cursorColor: #859901
 !URxvt*skipScroll:  true
 
 !URxvt.scrollStyle:          rxvt
-
 !URxvt.saveLines:            4095
-!URxvt.internalBorder:       0
