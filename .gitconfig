@@ -20,6 +20,7 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
+	excludesfile = ~/.gitignore
 [diff-so-fancy]
 	markEmptyLines = false
 [push]
